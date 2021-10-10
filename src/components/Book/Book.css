@@ -1,0 +1,119 @@
+.book-container{
+    display: flex;
+    width: 100%;
+    height: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.page{
+    overflow: hidden;
+}
+
+.page-image-1_1-1_1{
+    width: 100%;
+    height: 100%;
+    border: solid 0.5px rgba(0, 0, 0, 0.486);
+}
+.page-image-1_2-1_2{
+    width: 100%;
+    height: 48%;
+    border: solid 0.5px rgba(0, 0, 0, 0.486);
+}
+
+.page0-panel-1{
+    margin-bottom: 5%;
+    background-color: black;
+    background: url("../../assets/page0-cover.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page1-panel-1{
+    margin-bottom: 5%;
+    background-color: black;
+    background: url("../../assets/page1_panel1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page1-panel-2{
+    margin-top: 5%;
+    background-color: black;
+    background: url("../../assets/page1_panel2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page2-panel-1{
+    background-color: black;
+    background: url("../../assets/page_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.page0 {
+    padding: 1.5%;
+    background: white;
+    border: solid 1px rgba(0, 0, 0, 0.486);
+    overflow: hidden;
+}
+.page1 {
+    padding: 1.5%;
+    background: white;
+    border: solid 1px rgba(0, 0, 0, 0.486);
+    overflow: hidden;
+}
+.page2 {
+    background: white;
+    border: solid 1px rgba(0, 0, 0, 0.486);
+    overflow: hidden;
+}
+.page3 {
+    padding: 2.5%;
+    background: white;
+    border: solid 1px rgba(0, 0, 0, 0.486);
+    overflow: hidden;
+}
+
+.page-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.page-header {
+    height: 30px;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.page-image {
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.page-text {
+    height: 100%;
+    flex-grow: 1;
+    font-size: 80%;
+    text-align: justify;
+    margin-top: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-top: solid 1px hsl(35, 55, 90);
+}
+
+.page-footer {
+    height: 30px;
+    border-top: solid 1px hsl(35, 55, 90);
+    font-size: 80%;
+    color: hsl(35, 20, 50);
+}

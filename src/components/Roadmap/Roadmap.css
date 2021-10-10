@@ -1,0 +1,16 @@
+.roadmap{
+    margin: 0;
+    padding: 4rem 2rem;
+    font-family: 'Share Tech Mono', monospace, sans-serif;
+    color: white;
+}
+
+.roadmap-header{
+    padding: 1.5rem 0rem;
+    margin: 0rem 0rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background: red;
+    font-size: 2rem;
+}
