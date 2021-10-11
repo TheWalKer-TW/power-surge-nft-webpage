@@ -1,4 +1,6 @@
 .roadmap{
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 4rem 2rem;
     font-family: 'Share Tech Mono', monospace, sans-serif;
