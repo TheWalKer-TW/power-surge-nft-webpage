@@ -17,7 +17,7 @@
 }
 
 .cybr-btn {
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 2rem;
   --primary: hsl(0, 85%, calc(var(--primary-lightness, 50) * 1%));
   --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 100%);
   --primary-hue: 0;

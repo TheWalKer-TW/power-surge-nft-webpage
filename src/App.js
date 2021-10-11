@@ -6,21 +6,30 @@ import { ArwesThemeProvider, StylesBaseline } from '@arwes/core';
 
 let themeSettings = {};
 const palette = {
-    primary: { main: '#ff4090' },
+    primary: { main: '#ff2b2b' },
     secondary: { main: '#c466dc' },
-    neutral: { main: '#001711' },
+    neutral: { main: '#0f0000' },
     text: {
-        root: '#35efaa',
-        headings: '#40ffce',
+        root: '#630b0b',
+        headings: '#ff2b2b',
         link: '#c466dc',
         linkHover: '#d491fa'
     }
 };
-const fontScale = 0.5;
-const space = 8;
+// const palette = {
+//     primary: { main: '#40ffce' },
+//     secondary: { main: '#c466dc' },
+//     neutral: { main: '#001711' },
+//     text: {
+//         root: '#35efaa',
+//         headings: '#40ffce',
+//         link: '#c466dc',
+//         linkHover: '#d491fa'
+//     }
+// };
 const outline = 2;
 const shadow = { blur: 2 };
-themeSettings = { palette, fontScale, space, outline, shadow };
+themeSettings = { palette, outline, shadow };
 
 
 

@@ -4,7 +4,7 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <ul className="nav-links">
+            <div className="nav-links">
                 <li>
                     <button className="cybr-btn">
                         Home<span aria-hidden>_</span>
@@ -26,7 +26,7 @@ const Navbar = () => {
                         <span aria-hidden className="cybr-btn__tag">R25</span>
                     </button>
                 </li>
-            </ul>
+            </div>
         </nav>
     )
 }

@@ -8,22 +8,15 @@ const Book = (props) => {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight * (1 - 0.2);
 
-    console.log(windowWidth)
-    console.log(windowHeight)
 
     let bookWidth = windowWidth/2 - windowWidth/6;
     let bookHeight = (6071 / 4299) * bookWidth;
 
-    console.log(bookWidth)
-    console.log(bookHeight)
 
     if (bookHeight > windowHeight) {
         bookHeight = windowHeight * 0.9;
         bookWidth = (4299/6071) * bookHeight;
     }
-
-    console.log(bookWidth)
-    console.log(bookHeight)
     
     return (
         <section className="book-container" >

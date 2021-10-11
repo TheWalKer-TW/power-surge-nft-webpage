@@ -4,6 +4,7 @@
     height: 75%;
     align-items: center;
     justify-content: center;
+    margin: 1rem 0rem;
 }
 
 .page{
@@ -24,7 +25,7 @@
 .page0-panel-1{
     margin-bottom: 5%;
     background-color: black;
-    background: url("../../assets/Book/page0-cover.png");
+    background: url("../../assets/book/page0-cover.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -32,7 +33,7 @@
 .page1-panel-1{
     margin-bottom: 5%;
     background-color: black;
-    background: url("../../assets/Book/page1_panel1.png");
+    background: url("../../assets/book/page1_panel1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,14 +41,14 @@
 .page1-panel-2{
     margin-top: 5%;
     background-color: black;
-    background: url("../../assets/Book/page1_panel2.png");
+    background: url("../../assets/book/page1_panel2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .page2-panel-1{
     background-color: black;
-    background: url("../../assets/Book/page_2.jpg");
+    background: url("../../assets/book/page_2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
