@@ -26,7 +26,7 @@ const Book = (props) => {
     console.log(bookHeight)
     
     return (
-        <div className="book-container" >
+        <section className="book-container" >
             <FlipBook 
             width={bookWidth} height={bookHeight} 
             size='stretch'
@@ -48,7 +48,7 @@ const Book = (props) => {
                     <div className="page-footer">2</div>
                 </div>
             </FlipBook>
-        </div>
+        </section>
     );
 }
 

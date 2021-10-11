@@ -16,3 +16,32 @@
     background: red;
     font-size: 2rem;
 }
+
+.roadmap-phase{
+    margin: 1rem 0rem;
+    padding: 2rem 1rem;
+    background: transparent;
+    width: 60%;
+}
+
+.phase-title{
+    text-transform: uppercase;
+}
+
+.phase-description{
+    padding: 0 1rem;
+}
+
+.phase1-list{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding: 0 1rem;
+}
+
+.phase1-list-item::marker{
+    margin: 0;
+}
