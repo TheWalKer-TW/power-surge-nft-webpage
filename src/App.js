@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 
-import { Navbar, Book, Roadmap, Team } from './components';
+import { Intro, Navbar, Book, Roadmap, Team } from './components';
 
 import { ArwesThemeProvider, StylesBaseline } from '@arwes/core';
-
-import {Router, Route, Switch, Navlink} from 'react-router-dom'
 
 let themeSettings = {};
 const palette = {
@@ -33,28 +31,22 @@ const outline = 2;
 const shadow = { blur: 2 };
 themeSettings = { palette, outline, shadow };
 
-
-
 const App = () => {
+
+    const all = useRef(null)
+        
     return (
         <div>
-            <ArwesThemeProvider themeSettings={themeSettings}>
-                <StylesBaseline />
-                <Router>
-                    <Switch>
-                        <Navbar />
-                        <Route path="/home">
-                            <Book />
-                        </Route>
-                        <Route path="/roadmap">
-                            <Roadmap />
-                        </Route>
-                        <Route path="/about">
-                            <Team />
-                        </Route>
-                    </Switch>
-                </Router>
-            </ArwesThemeProvider>
+            <Intro all={ all } />
+            <div ref={all}>
+                <ArwesThemeProvider themeSettings={themeSettings}>
+                    <Navbar />
+                    <Book />
+                    <StylesBaseline />
+                    <Roadmap />
+                    <Team />
+                </ArwesThemeProvider>
+            </div>
         </div>
     )
 }

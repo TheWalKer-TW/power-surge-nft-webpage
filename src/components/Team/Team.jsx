@@ -8,7 +8,7 @@ import "./Team.css"
 
 const Team = () => {
     return (
-        <section className='team'>
+        <section className='team' id="team">
             <div className="team-header">
                 <FrameUnderline animator={{ animate: false }} hover>
                     <div><h1>Team_</h1></div>

@@ -1,14 +1,14 @@
 .roadmap{
     display: flex;
     flex-direction: column;
-    margin: 1rem 0rem;
-    padding: 0rem 0rem;
+    padding: 2.5rem 0rem;
     font-family: 'Share Tech Mono', monospace, sans-serif;
+    color: white;
 }
 
 .roadmap-header{
     padding: 0rem 0rem;
-    margin: 1rem 0rem;
+    margin: 1rem 0rem 2rem 0rem;
     align-self: center;
     text-align: center;
     background: transparent;

@@ -19,7 +19,7 @@ const Book = (props) => {
     }
     
     return (
-        <section className="book-container" >
+        <section className="book-container" id="home">
             <FlipBook 
             width={bookWidth} height={bookHeight} 
             size='stretch'

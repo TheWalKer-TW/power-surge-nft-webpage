@@ -5,7 +5,7 @@ import { FramePentagon, FrameUnderline } from '@arwes/core';
 
 const Roadmap = () => {
     return (
-        <section className="roadmap">
+        <section className="roadmap" id="roadmap">
             <div className="roadmap-header">
                 <FrameUnderline animator={{ animate: false }} hover>
                     <div><h1>Roadmap_</h1></div>

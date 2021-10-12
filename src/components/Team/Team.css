@@ -1,13 +1,13 @@
 .team{
     width: 97.5%;
     height: 100%;
-    padding: 1rem;
+    padding: 2.5rem 1rem 0rem 1rem;
     font-family: 'Share Tech Mono', monospace, sans-serif;
 }
 
 .team-header{
     padding: 0rem 0rem;
-    margin: 1rem 0rem;
+    margin: 1rem 0rem 3rem 0rem;
     align-self: center;
     text-align: center;
     background: transparent;
