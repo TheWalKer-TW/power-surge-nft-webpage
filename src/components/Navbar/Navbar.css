@@ -1,5 +1,6 @@
 .navbar{
-    background: rgb(19, 19, 19);;
+    /* background: #630b0b; */
+    background: rgb(19, 19, 19);
     padding: 1.5rem 1rem;
     position: sticky;
     z-index: 40;
@@ -18,16 +19,19 @@
 
 .cybr-btn {
     padding: 0.5rem 2rem;
-  --primary: hsl(0, 85%, calc(var(--primary-lightness, 50) * 1%));
-  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 100%);
+  --primary: #630b0b;
+  /* --primary: hsl(0, 85%, calc(var(--primary-lightness, 50) * 1%)); */
+  --shadow-primary: #ff2b2b;
+  /* --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 100%); */
   --primary-hue: 0;
   --primary-lightness: 50;
-  --color: hsl(0, 0%, 100%);
+  --color: #ff2b2b;
   --font-size: 1rem;
   --shadow-primary-hue: 180;
   --label-size: 0.5rem;
   --shadow-secondary-hue: 60;
-  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+  --shadow-secondary: #ff2b2b;
+  /* --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%); */
   --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
   --border: 0.2rem;
   --shimmy-distance: 5;
@@ -89,7 +93,8 @@
   bottom: -5%;
   right: 5%;
   font-weight: normal;
-  color: hsl(0, 0%, 100%);
+  color: #ff2b2b;
+  /* color: hsl(0, 0%, 100%); */
   font-size: var(--label-size);
 }
 

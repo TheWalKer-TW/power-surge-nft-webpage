@@ -4,7 +4,6 @@
     margin: 1rem 0rem;
     padding: 0rem 0rem;
     font-family: 'Share Tech Mono', monospace, sans-serif;
-    color: white;
 }
 
 .roadmap-header{
@@ -36,9 +35,6 @@
     padding: 0 1rem;
 }
 
-.roadmap-left{
-    
-}
 .roadmap-right{
     margin-left: auto;
 }

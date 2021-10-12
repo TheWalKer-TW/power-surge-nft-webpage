@@ -1,12 +1,19 @@
 import React from 'react'
+
+
 import "./Navbar.css"
+
+const goto = (e) => {
+    console.log(e)
+    // console.log(e.target)
+}
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="nav-links">
                 <li>
-                    <button className="cybr-btn">
+                    <button className="cybr-btn" onClick={goto}>
                         Home<span aria-hidden>_</span>
                         <span aria-hidden className="cybr-btn__glitch">Home_</span>
                         <span aria-hidden className="cybr-btn__tag">R25</span>
