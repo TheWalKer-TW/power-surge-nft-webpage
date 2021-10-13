@@ -4,7 +4,7 @@ import "./Intro.scss"
 
 const Intro = ({ all }) => {
 
-    const commands = String.raw`samurai@internal-cdprojektred.com/:~ cd HAX samurai@internal-cdprojektred.com/HAX/:~ ls`;
+    const commands = String.raw`samurai@internal-powersurge.com/:~ cd HAX samurai@internal-powersurge.com/HAX/:~ ls`;
 
     const beep = String.raw`
 
@@ -82,16 +82,16 @@ const Intro = ({ all }) => {
         (async () => {
             DisplayAnything();
             console.log(all.current.style)
-            await DrawCommands("/:~ ssh samurai@internal-cdprojektred.com -p 2000");
+            await DrawCommands("/:~ ssh samurai@internal-powersurge.com -p 2000");
             await Delay(1000);
-            RenderString("samurai@internal-cdprojektred.com password:");
-            await Delay(5000);
+            RenderString("samurai@internal-powersurge.com password:");
+            await Delay(3000);
             RenderString("\n");
             await DrawCommands(commands);
-            RenderString('\nbeep.js    samurai.js\n\n');
-            await DrawCommands('samurai@internal-cdprojektred.com/HAX:~ node beep.js');
+            // RenderString('\nbeep.js    samurai.js\n\n');
+            // await DrawCommands('samurai@internal-powersurge.com/HAX:~ node beep.js');
             await DrawLines(beep);
-            await TypeString("\n\nSeems you're not among the sheep after all. Wanna play a game? Watch for the beeps.");
+            await TypeString("\n\nSeems you're not among the sheep after all. Wanna see more? Take a look.");
             await Delay(3000);
             ResetTerminal();
         })();
