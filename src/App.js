@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
-import { Intro, Navbar, Book, Roadmap, Team } from './components';
+import { Intro, Navbar, Book, Gallery } from './components';
 
 import { ArwesThemeProvider, StylesBaseline } from '@arwes/core';
 
@@ -33,18 +33,19 @@ themeSettings = { palette, outline, shadow };
 
 const App = () => {
 
+    const [page, setPage] = useState(0)
+
     const all = useRef(null)
         
     return (
         <div>
-            <Intro all={ all } />
-            <div ref={all}>
-                <ArwesThemeProvider themeSettings={themeSettings}>
-                    <Navbar />
-                    <Book />
+            {/* <Intro all={ all } /> */}
+            <div ref={ all }>
+                <ArwesThemeProvider themeSettings={ themeSettings }>
+                    <Navbar changePage={ page => setPage(page) }/>
+                    <Book page={ page }/>
                     <StylesBaseline />
-                    <Roadmap />
-                    <Team />
+                    <Gallery />
                 </ArwesThemeProvider>
             </div>
         </div>

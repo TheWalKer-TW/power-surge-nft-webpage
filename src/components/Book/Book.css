@@ -4,7 +4,6 @@
     height: 75%;
     align-items: center;
     justify-content: center;
-    margin: 0rem 0rem 0rem 0rem;
     padding: 3rem 0rem 2.5rem 0rem;
 }
 
@@ -34,7 +33,7 @@
 .page1-panel-1{
     margin-bottom: 5%;
     background-color: black;
-    background: url("../../assets/book/page1_panel1.png");
+    background: url("../../assets/book/page1_full_panel1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -42,14 +41,28 @@
 .page1-panel-2{
     margin-top: 5%;
     background-color: black;
-    background: url("../../assets/book/page1_panel2.png");
+    background: url("../../assets/book/page1_full_panel2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .page2-panel-1{
     background-color: black;
-    background: url("../../assets/book/page_2.jpg");
+    background: url("../../assets/book/page2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page3-panel-1{
+    background-color: black;
+    background: url("../../assets/book/page3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page4-panel-1{
+    background-color: black;
+    background: url("../../assets/book/page4.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,7 +86,17 @@
     overflow: hidden;
 }
 .page3 {
-    padding: 2.5%;
+    background: white;
+    border: solid 1px rgba(0, 0, 0, 0.486);
+    overflow: hidden;
+}
+.page4 {
+    background: white;
+    border: solid 1px rgba(0, 0, 0, 0.486);
+    overflow: hidden;
+}
+.page5 {
+    padding: 1.5%;
     background: white;
     border: solid 1px rgba(0, 0, 0, 0.486);
     overflow: hidden;

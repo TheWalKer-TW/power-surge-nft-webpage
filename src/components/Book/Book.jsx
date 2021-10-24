@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FlipBook from 'react-pageflip';
+
 
 import "./Book.css"
 
 const Book = (props) => {
+
+    // const book = useRef();
+    // useEffect(() => {
+    //     this.pageFlip.getPageFlip().turnToPage(props.page);
+    // });
 
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight * (1 - 0.2);
@@ -24,7 +30,10 @@ const Book = (props) => {
             width={bookWidth} height={bookHeight} 
             size='stretch'
             minWidth={bookWidth} minHeight={bookHeight}
-            maxWidth={bookWidth} maxHeight={bookHeight} >
+            maxWidth={bookWidth} maxHeight={bookHeight}
+            // ref={book}
+            // ref={(el) => (this.flipBook = el)}
+            >
                 <div className="page page0">
                     <div className="page-image-1_1-1_1 page0-panel-1"></div>
                 </div>
@@ -36,9 +45,13 @@ const Book = (props) => {
                     <div className="page-image-1_1-1_1 page2-panel-1"></div>
                 </div>
                 <div className="page page3">
-                    <h2 className="page-header">Page header 1</h2>
-                    <div className="page-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus mollis nibh, non convallis ex convallis eu. Suspendisse potenti. Aenean vitae pellentesque erat. Integer non tristique quam. Suspendisse rutrum, augue ac sollicitudin mollis, eros velit viverra metus, a venenatis tellus tellus id magna. Aliquam ac nulla rhoncus, accumsan eros sed, viverra enim. Pellentesque non justo vel nibh sollicitudin pharetra suscipit ut ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus mollis nibh, non convallis ex convallis eu. Suspendisse potenti. Aenean vitae pellentesque erat. Integer non tristique quam. Suspendisse rutrum, augue ac sollicitudin mollis, eros velit viverra metus, a venenatis tellus tellus id magna.</div>
-                    <div className="page-footer">2</div>
+                    <div className="page-image-1_1-1_1 page3-panel-1"></div>
+                </div>
+                <div className="page page4">
+                    <div className="page-image-1_1-1_1 page4-panel-1"></div>
+                </div>
+                <div className="page page5">
+                    <div className="page-image-1_1-1_1 page0-panel-1"></div>
                 </div>
             </FlipBook>
         </section>
