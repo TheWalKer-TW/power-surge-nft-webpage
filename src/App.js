@@ -39,7 +39,7 @@ const App = () => {
         
     return (
         <div>
-            <Intro all={ all } />
+            {/* <Intro all={ all } /> */}
             <div ref={ all }>
                 <ArwesThemeProvider themeSettings={ themeSettings }>
                     <Navbar changePage={ page => setPage(page) }/>
