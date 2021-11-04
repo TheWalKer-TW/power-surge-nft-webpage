@@ -8,12 +8,12 @@ const Book = ({ page }) => {
 
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight * (1 - 0.2);
-    
-    
+
+
     let bookWidth = windowWidth/2 - windowWidth/6;
     let bookHeight = (6071 / 4299) * bookWidth;
-    
-    
+
+
     if (bookHeight > windowHeight) {
         bookHeight = windowHeight * 0.9;
         bookWidth = (4299/6071) * bookHeight;
@@ -29,20 +29,18 @@ const Book = ({ page }) => {
         // book.flipPrev();
         // console.log(book.current.getPageFlip())
     }
-    
+
     return (
         <section className="book-container" id="home">
-            <FlipBook 
-            width={bookWidth} height={bookHeight} 
+            <FlipBook
+            width={bookWidth} height={bookHeight}
             size='stretch'
             minWidth={bookWidth} minHeight={bookHeight}
             maxWidth={bookWidth} maxHeight={bookHeight}
+            usePortrait={false}
             // ref={ book }
             // ref={(component) => (this.flipBook = component)}
             >
-                <div className="page page0">
-                    <div className="page-image-1_1-1_1 page0-panel-1"></div>
-                </div>
                 <div className="page page1">
                     <div className="page-image-1_2-1_2 page1-panel-1"></div>
                     <div className="page-image-1_2-1_2 page1-panel-2"></div>
@@ -55,10 +53,6 @@ const Book = ({ page }) => {
                 </div>
                 <div className="page page4">
                     <div className="page-image-1_1-1_1 page4-panel-1"></div>
-                </div>
-                <div className="page page5">
-                    {/* <div className="page-image-1_1-1_1 page0-panel-1"></div> */}
-                    <button type='button' onClick={nextButtonClick}>LOL</button>
                 </div>
             </FlipBook>
         </section>
