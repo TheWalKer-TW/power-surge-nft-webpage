@@ -14,13 +14,20 @@ const Gallery = () => {
                     <div><h1>Gallery_</h1></div>
                 </FrameUnderline>
             </div>
-            <Grid container justifyContent='center' alignItems='center' spacing={6}>
-                {Exemples.exemples.map( (exemple) => (
-                    <Grid item key={exemple.id} xs={12} sm={6} md={4} lg={3}>
-                        <Exemple exemple={ exemple } />
-                    </Grid>
-                ))}
-            </Grid>
+            <div className='grid-container'>
+                <Grid 
+                container 
+                justifyContent='center' 
+                alignItems='center' 
+                spacing={6}
+                >
+                    {Exemples.exemples.map( (exemple) => (
+                        <Grid item key={exemple.id} xs={12} sm={6} md={4} lg={3}>
+                            <Exemple exemple={ exemple } />
+                        </Grid>
+                    ))}
+                </Grid>
+            </div>
         </section>
     );
 }

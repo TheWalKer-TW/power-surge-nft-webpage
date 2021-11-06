@@ -1,10 +1,15 @@
-☐ Añadir dedo de titulo entre imagenes en cover
+✔ Añadir dedo de titulo entre imagenes en cover @done (6/11/2021 14:58:33)
 ✔ Añadir un noselect a todo @done (24/10/2021 19:54:27)
-☐ Change the page 1 panels to the empty panels and fill the text
+✔ Change the page 1 panels to the empty panels and fill the text @done (6/11/2021 14:58:40)
 ☐ Connect wallet button
 ☐ Counter to select how many to mint
 ☐ Mint button
 ☐ Counter that keeps track of how many have been minted
 ✔ Add the exemples @done (24/10/2021 21:02:45)
 ☐ Short the intro
-
+✔ npm uninstall @mui/icons-material @done (6/11/2021 15:00:34)
+✔ Poner la navbar en la pagina de error 404 @done (6/11/2021 14:59:58)
+☐ Cambiar la primera pagina de resolucion
+☐ Hacer version telefono
+☐ Acabar navbar
+☐ Q todo concuerde con la navbar

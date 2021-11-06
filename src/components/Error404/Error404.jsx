@@ -1,15 +1,12 @@
 import React, { useRef, useEffect } from 'react'
 
-import "./Intro.scss"
+import "./Error404.scss"
 
-const Intro = ({ all }) => {
+const Error404 = ( ) => {
 
     const commands = String.raw`samurai@internal-powersurge.io/:~ cd HAX samurai@internal-powersurge.io/HAX/:~ ls`;
 
-    const beep = String.raw`
-
-
-          _____                    _____                    _____                    _____          
+    const beep = String.raw`          _____                    _____                    _____                    _____          
 *******    *******   **       ** ******** *******      ******** **     ** *******     ********  ********
 /**////**  **/////** /**      /**/**///// /**////**    **////// /**    /**/**////**   **//////**/**///// 
 /**   /** **     //**/**   *  /**/**      /**   /**   /**       /**    /**/**   /**  **      // /**      
@@ -19,6 +16,19 @@ const Intro = ({ all }) => {
 /**       //*******  /**/   ///**/********/**   //**   ******** //******* /**   //** //******** /********
 //         ///////   //       // //////// //     //   ////////   ///////  //     //   ////////  //////// 
 
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+ ********                                    **   ****     ** 
+/**/////                                    */*  *///**   */* 
+/**       ****** ******  ******  ******    * /* /*  */*  * /* 
+/******* //**//*//**//* **////**//**//*   ******/* * /* ******
+/**////   /** /  /** / /**   /** /** /   /////* /**  /*/////* 
+/**       /**    /**   /**   /** /**         /* /*   /*    /* 
+/********/***   /***   //****** /***         /* / ****     /* 
+//////// ///    ///     //////  ///          /   ////      /  
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #`;
@@ -38,14 +48,9 @@ const Intro = ({ all }) => {
         return new Promise((resolve) => setTimeout(resolve, time))
     };
 
-    const DisplayAnything = () => {
-        all.current.style.visibility = "hidden";
-    }
-
     const ResetTerminal = () => {
         intro.current.innerHTML = '';
         intro.current.style.display = "none";
-        all.current.style.visibility = "visible";
     };
 
     const RenderString = characters => {
@@ -80,20 +85,9 @@ const Intro = ({ all }) => {
 
     useEffect(() => {
         (async () => {
-            DisplayAnything();
-            console.log(all.current.style)
-            await DrawCommands("/:~ ssh samurai@internal-powersurge.io -p 2000");
-            await Delay(1000);
-            RenderString("samurai@internal-powersurge.io password:");
-            await Delay(3000);
-            RenderString("\n");
-            await DrawCommands(commands);
-            // RenderString('\nbeep.js    samurai.js\n\n');
-            // await DrawCommands('samurai@internal-powersurge.com/HAX:~ node beep.js');
             await DrawLines(beep);
-            await TypeString("\n\nSeems you're not among the sheep after all. Wanna see more? Take a look.");
+            await TypeString("\n\nSeems you're lost. Page couldn't be found.");
             await Delay(3000);
-            ResetTerminal();
         })();
     }, []);
 
@@ -107,4 +101,4 @@ const Intro = ({ all }) => {
     )
 }
 
-export default Intro
+export default Error404

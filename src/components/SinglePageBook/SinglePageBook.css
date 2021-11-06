@@ -1,0 +1,21 @@
+.singlepagebook-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem 1rem;
+}
+
+.singlepagebook-page{
+    height: 100vh;
+}
+
+.single-page-section{
+    padding: 0rem;
+}

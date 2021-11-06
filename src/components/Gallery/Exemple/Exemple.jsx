@@ -8,8 +8,8 @@ const Exemple = ({ exemple }) => {
         <Figure
         src={exemple.image}
         alt={exemple.description}
-    >
-    </Figure>
+        >
+        </Figure>
     );
 }
 

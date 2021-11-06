@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react'
-
-import { Intro, Navbar, Book, Gallery } from './components';
-
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom'
 import { ArwesThemeProvider, StylesBaseline } from '@arwes/core';
+
+import { Intro, Navbar, Book, Gallery, SinglePageBook, Error404 } from './components';
+
 
 let themeSettings = {};
 const palette = {
@@ -12,28 +13,15 @@ const palette = {
     text: {
         root: '#630b0b',
         headings: '#ff2b2b',
-        link: '#c466dc',
-        linkHover: '#d491fa'
+        link: '#630b0b',
+        linkHover: '#a32222'
     }
 };
-// const palette = {
-//     primary: { main: '#40ffce' },
-//     secondary: { main: '#c466dc' },
-//     neutral: { main: '#001711' },
-//     text: {
-//         root: '#35efaa',
-//         headings: '#40ffce',
-//         link: '#c466dc',
-//         linkHover: '#d491fa'
-//     }
-// };
 const outline = 2;
 const shadow = { blur: 2 };
 themeSettings = { palette, outline, shadow };
 
 const App = () => {
-
-    const [page, setPage] = useState(0)
 
     const all = useRef(null)
         
@@ -41,12 +29,31 @@ const App = () => {
         <div>
             {/* <Intro all={ all } /> */}
             <div ref={ all }>
-                <ArwesThemeProvider themeSettings={ themeSettings }>
-                    <Navbar changePage={ page => setPage(page) }/>
-                    <Book page={ page }/>
-                    <StylesBaseline />
-                    <Gallery />
-                </ArwesThemeProvider>
+                <BrowserRouter>
+                    <ArwesThemeProvider themeSettings={ themeSettings }>
+                        {/* <Navbar /> */}
+                        {/* <Book /> */}
+                        <StylesBaseline />
+                        {/* <Gallery /> */}
+                        <Switch>
+                            <Route exact path='/'>
+                                <Navbar />
+                                <Book />
+                                <Gallery />
+                            </Route>
+                            <Route exact path='/manga'>
+                                <SinglePageBook />
+                            </Route>
+                            <Route exact path="/manga/:section">
+                                <SinglePageBook />
+                            </Route>
+                            <Route path="*">
+                                <Error404 />
+                                <Navbar />
+                            </Route>
+                        </Switch>
+                    </ArwesThemeProvider>
+                </BrowserRouter>
             </div>
         </div>
     )
