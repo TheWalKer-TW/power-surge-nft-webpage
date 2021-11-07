@@ -13,3 +13,7 @@
 ☐ Hacer version telefono
 ☐ Acabar navbar
 ☐ Q todo concuerde con la navbar
+☐ Hacer un useState de metamask connected o no y poner el connect wallet en la navbar encima de todo
+y que desaparezca cuando esta conectado
+☐ https://stackoverflow.com/questions/39435395/reactjs-how-to-determine-if-the-application-is-being-viewed-on-mobile-or-deskto
+
