@@ -1,9 +1,12 @@
 ✔ Añadir dedo de titulo entre imagenes en cover @done (6/11/2021 14:58:33)
 ✔ Añadir un noselect a todo @done (24/10/2021 19:54:27)
 ✔ Change the page 1 panels to the empty panels and fill the text @done (6/11/2021 14:58:40)
-☐ Connect wallet button
-☐ Counter to select how many to mint
-☐ Mint button
+✔ Connect wallet button @done (7/11/2021 22:22:17)
+☐ Estilizar el wallet button
+✔ Counter to select how many to mint @done (7/11/2021 22:23:42)
+☐ Estilizar el counter de cuantos mintear
+✔ Mint button @done (7/11/2021 22:24:34)
+☐ Estilizar el mint button
 ☐ Counter that keeps track of how many have been minted
 ✔ Add the exemples @done (24/10/2021 21:02:45)
 ☐ Short the intro
@@ -11,9 +14,8 @@
 ✔ Poner la navbar en la pagina de error 404 @done (6/11/2021 14:59:58)
 ☐ Cambiar la primera pagina de resolucion
 ☐ Hacer version telefono
+        https://stackoverflow.com/questions/39435395/reactjs-how-to-determine-if-the-application-is-being-viewed-on-mobile-or-deskto
 ☐ Acabar navbar
 ☐ Q todo concuerde con la navbar
-☐ Hacer un useState de metamask connected o no y poner el connect wallet en la navbar encima de todo
-y que desaparezca cuando esta conectado
-☐ https://stackoverflow.com/questions/39435395/reactjs-how-to-determine-if-the-application-is-being-viewed-on-mobile-or-deskto
+✔ Hacer un useState de metamask connected o no y poner el connect wallet en la navbar encima de todo @done (7/11/2021 18:43:08) y que desaparezca cuando esta conectado
 

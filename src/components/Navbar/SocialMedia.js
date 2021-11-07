@@ -3,13 +3,13 @@ const SocialMedia = {
     socialmedia: [
         {
             id: 1,
-            name: 'TWITTER',
+            name: 'TWITTER_',
             icon: faTwitter,
             url: 'https://twitter.com/PowerSurgeNFT'
         },
         {
             id: 2,
-            name: 'DISCORD',
+            name: 'DISCORD_',
             icon: faDiscord,
             url: 'https://discord.gg/7HCXZWHNw2'
         }

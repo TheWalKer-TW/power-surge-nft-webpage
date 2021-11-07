@@ -7,11 +7,11 @@
     z-index: 40;
     top: 0;
     right: 0;
-    transition: width 200ms ease;
+    opacity: 1;
 }
 
 .navbar:hover{
-  width: 12rem;
+   width: 12rem;
 }
 .navbar:hover .display{
   display: none;
@@ -39,14 +39,16 @@
   margin-top: auto;
 }
 
-.nav-social-media li a{
+.nav-social-media a{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem 0rem;
   list-style-type: none;
+  width: 8rem;
+  font-family: 'Share Tech Mono', monospace, sans-serif;
 }
 
 .nav-links li{

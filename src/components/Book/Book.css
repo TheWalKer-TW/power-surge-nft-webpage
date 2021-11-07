@@ -1,10 +1,39 @@
-.book-container{
+.book-section{
     display: flex;
     width: 100%;
-    height: 75%;
+    height: 100%;
     align-items: center;
     justify-content: center;
     padding: 1%;
+}
+.book-container{
+    position: relative;
+    display: flex;
+    width: min-content;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container{
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    padding: 1% 1.5% 1.75%;
+}
+.form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 42.5%;
+    top: 42.5%;
 }
 
 .page{
@@ -20,15 +49,6 @@
     width: 100%;
     height: 48%;
     border: solid 0.5px rgba(0, 0, 0, 0.486);
-}
-
-.page0-panel-1{
-    margin-bottom: 5%;
-    background-color: black;
-    background: url("../../assets/book/page0-cover.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .page1-panel-1{
     margin-bottom: 5%;

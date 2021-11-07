@@ -27,17 +27,16 @@ const App = () => {
         
     return (
         <div>
+            <div className='scanline'></div>
+            {/* With the style on Intro.scss */}
+            <Navbar />
             {/* <Intro all={ all } /> */}
             <div ref={ all }>
                 <BrowserRouter>
                     <ArwesThemeProvider themeSettings={ themeSettings }>
-                        {/* <Navbar /> */}
-                        {/* <Book /> */}
                         <StylesBaseline />
-                        {/* <Gallery /> */}
                         <Switch>
                             <Route exact path='/'>
-                                <Navbar />
                                 <Book />
                                 <Gallery />
                             </Route>
@@ -49,7 +48,6 @@ const App = () => {
                             </Route>
                             <Route path="*">
                                 <Error404 />
-                                <Navbar />
                             </Route>
                         </Switch>
                     </ArwesThemeProvider>
