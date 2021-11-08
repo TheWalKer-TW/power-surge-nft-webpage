@@ -17,5 +17,7 @@
         https://stackoverflow.com/questions/39435395/reactjs-how-to-determine-if-the-application-is-being-viewed-on-mobile-or-deskto
 ☐ Acabar navbar
 ☐ Q todo concuerde con la navbar
+✔ Hacer que la navbar lleve a cada pagina @done (8/11/2021 9:40:22)
+☐ Arreglar el boton metamask de la navbar para q no haga la funcion 14873209487 veces
 ✔ Hacer un useState de metamask connected o no y poner el connect wallet en la navbar encima de todo @done (7/11/2021 18:43:08) y que desaparezca cuando esta conectado
 

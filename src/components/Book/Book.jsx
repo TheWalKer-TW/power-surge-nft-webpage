@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import FlipBook from 'react-pageflip';
 
 
 import "./Book.css"
 
-const Book = () => {
+const Book = ({ page, setPage }) => {
 
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight * (0.975);
@@ -22,7 +22,7 @@ const Book = () => {
     const book = useRef();
 
     const [amountToMint, setAmountToMint] = useState("1");
-    const [formVisibility, setformVisibility] = useState(true);
+    const [formVisibility, setFormVisibility] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,20 +30,32 @@ const Book = () => {
     }
 
     const handleMetaMask = () => {
-        console.log("Handle MetaMask Connection")
+        console.log("Handle MetaMask Connection - Book")
     }
 
+    const onFlip = (e) => {
+        const currentPage = book.current.pageFlip().getCurrentPageIndex();
+        currentPage !== 0 ? setFormVisibility(false) : setFormVisibility(true);
+    }
     const onChangeState = (e) => {
     
         const currentState = e.data;
         const currentPage = book.current.pageFlip().getCurrentPageIndex();
+        setPage(currentPage)
 
-        currentPage !== 0 ? setformVisibility(false) :
-            currentState === "flipping" ? setformVisibility(false) :
-                currentState === "user_fold" ? setformVisibility(false) :
-                    setformVisibility(true);
+        currentPage !== 0 ? setFormVisibility(false) :
+            currentState === "flipping" ? setFormVisibility(false) :
+                currentState === "user_fold" ? setFormVisibility(false) :
+                    setFormVisibility(true);
     
     }
+
+    useEffect( () => {
+        if(book.current.pageFlip()){
+            book.current.pageFlip().flip(page);
+            onFlip();
+        };
+    }, [page]);
 
     return (
         <section className="book-section" id="home">
@@ -77,6 +89,7 @@ const Book = () => {
                     maxWidth={bookWidth} maxHeight={bookHeight}
                     usePortrait={false}
                     ref={book}
+                    onFlip={onFlip}
                     onChangeState={onChangeState}
                 >
                     <div className="page page1">

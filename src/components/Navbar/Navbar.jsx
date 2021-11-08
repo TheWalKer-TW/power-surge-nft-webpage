@@ -7,10 +7,14 @@ import SocialMedia from './SocialMedia'
 import Metamask from "../../assets/logos/metamask-fox.svg"
 
 
-const Navbar = () => {
+const Navbar = ({ setPage }) => {
 
     const [metaMaskConnected, setMetaMaskConnected] = useState(false)
     const [isShown, setIsShown] = useState(false);
+
+    const handleMetaMask = () => {
+        console.log("Handle MetaMask Connection - NavBar");
+    };
 
     return (
         <nav className="navbar" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
@@ -19,7 +23,10 @@ const Navbar = () => {
                     {!metaMaskConnected && 
                         <li>
                             <img src={Metamask} alt='metamask-logo' className='nav-icon display' />
-                            <button className="cybr-btn display-none">
+                            <button 
+                            className="cybr-btn display-none"
+                            onClick={handleMetaMask()}
+                            >
                                 Connect<span aria-hidden>_</span>
                                 <span aria-hidden className="cybr-btn__glitch">Connect_</span>
                                 <span aria-hidden className="cybr-btn__tag">R25</span>
@@ -28,7 +35,10 @@ const Navbar = () => {
                     {NavItems.navitems.map((navitem) => (
                         <li id={navitem.name}>
                             <FontAwesomeIcon icon={navitem.icon} className='nav-icon display'></FontAwesomeIcon>
-                            <button className="cybr-btn display-none">
+                            <button 
+                            className="cybr-btn display-none"
+                            onClick={() => setPage(navitem.id)}
+                            >
                                 {navitem.name}<span aria-hidden>_</span>
                                 <span aria-hidden className="cybr-btn__glitch">{navitem.name}_</span>
                                 <span aria-hidden className="cybr-btn__tag">R25</span>

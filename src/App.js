@@ -24,12 +24,14 @@ themeSettings = { palette, outline, shadow };
 const App = () => {
 
     const all = useRef(null)
+
+    const [page, setPage] = useState("0")
         
     return (
         <div>
             <div className='scanline'></div>
             {/* With the style on Intro.scss */}
-            <Navbar />
+            <Navbar setPage={ setPage } />
             {/* <Intro all={ all } /> */}
             <div ref={ all }>
                 <BrowserRouter>
@@ -37,7 +39,7 @@ const App = () => {
                         <StylesBaseline />
                         <Switch>
                             <Route exact path='/'>
-                                <Book />
+                                <Book page={ page } setPage={ setPage } />
                                 <Gallery />
                             </Route>
                             <Route exact path='/manga'>

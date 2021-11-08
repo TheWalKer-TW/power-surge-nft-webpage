@@ -2,22 +2,22 @@ import { faHome, faBook, faMapSigns, faUsers } from '@fortawesome/free-solid-svg
 const NavItems = {
     navitems: [
         {
-            id: 1,
+            id: 0,
             name: 'Home',
             icon: faHome
         },
         {
-            id: 2,
+            id: 1,
             name: 'Story',
             icon: faBook
         },
         {
-            id: 3,
+            id: 2,
             name: 'Roadmap',
             icon: faMapSigns
         },
         {
-            id: 4,
+            id: 3,
             name: 'Team',
             icon: faUsers
         },
