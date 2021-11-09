@@ -1,23 +1,21 @@
+☐ Counter that keeps track of how many have been minted
+☐ Short the intro
 ✔ Añadir dedo de titulo entre imagenes en cover @done (6/11/2021 14:58:33)
 ✔ Añadir un noselect a todo @done (24/10/2021 19:54:27)
 ✔ Change the page 1 panels to the empty panels and fill the text @done (6/11/2021 14:58:40)
 ✔ Connect wallet button @done (7/11/2021 22:22:17)
-☐ Estilizar el wallet button
 ✔ Counter to select how many to mint @done (7/11/2021 22:23:42)
-☐ Estilizar el counter de cuantos mintear
 ✔ Mint button @done (7/11/2021 22:24:34)
-☐ Estilizar el mint button
-☐ Counter that keeps track of how many have been minted
 ✔ Add the exemples @done (24/10/2021 21:02:45)
-☐ Short the intro
 ✔ npm uninstall @mui/icons-material @done (6/11/2021 15:00:34)
 ✔ Poner la navbar en la pagina de error 404 @done (6/11/2021 14:59:58)
-☐ Cambiar la primera pagina de resolucion
-☐ Hacer version telefono
-        https://stackoverflow.com/questions/39435395/reactjs-how-to-determine-if-the-application-is-being-viewed-on-mobile-or-deskto
-☐ Acabar navbar
-☐ Q todo concuerde con la navbar
 ✔ Hacer que la navbar lleve a cada pagina @done (8/11/2021 9:40:22)
-☐ Arreglar el boton metamask de la navbar para q no haga la funcion 14873209487 veces
 ✔ Hacer un useState de metamask connected o no y poner el connect wallet en la navbar encima de todo @done (7/11/2021 18:43:08) y que desaparezca cuando esta conectado
+☐ Estilizar el wallet button
+☐ Estilizar el counter de cuantos mintear
+☐ Estilizar el mint button
+☐ Acabar navbar
+☐ Arreglar el boton metamask de la navbar para q no haga la funcion 14873209487 veces
 
+☐ Hacer version telefono
+https://stackoverflow.com/questions/39435395/reactjs-how-to-determine-if-the-application-is-being-viewed-on-mobile-or-deskto
