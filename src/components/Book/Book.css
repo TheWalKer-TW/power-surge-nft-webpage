@@ -27,13 +27,41 @@
 .form-div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   position: absolute;
   width: 50%;
-  height: 50%;
+  height: 45%;
   left: 42.5%;
   top: 42.5%;
+}
+
+.mint-form{
+  background-color: #630b0b;
+  width: 9rem;
+  border-radius: 10%;
+  border: 2px solid #ff2b2b;
+  font-family: "Share Tech Mono", monospace, sans-serif;
+  padding: 0rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.mint-form-item{
+  margin: 0.3rem 0rem;
+  color: #ff2b2b;
+  border-radius: 10%;
+}
+
+.mint-amount-counter{
+  border: none;
+  width: fit-content;
+}
+
+.submit-amountToMint{
+  
 }
 
 .page {
@@ -163,9 +191,9 @@
   color: hsl(35, 20, 50);
 }
 
-.cybr-btn {
+.cybr-btn-book {
   padding: 0.5rem 2rem;
-  width: 8rem;
+  width: 9rem;
   --primary: #630b0b;
   --shadow-primary: #ff2b2b;
   --primary-hue: 0;
@@ -278,17 +306,17 @@
   font-weight: 700;
   border: 0;
   transition: background 0.2s;
-  z-index: 1000;
+  z-index: 50;
 }
 
-.cybr-btn:hover {
+.cybr-btn-book:hover {
   --primary: hsl(
     var(--primary-hue),
     85%,
     calc(var(--primary-lightness, 50) * 0.8%)
   );
 }
-.cybr-btn:active {
+.cybr-btn-book:active {
   --primary: hsl(
     var(--primary-hue),
     85%,
@@ -296,8 +324,8 @@
   );
 }
 
-.cybr-btn:after,
-.cybr-btn:before {
+.cybr-btn-book:after,
+.cybr-btn-book:before {
   content: "";
   position: absolute;
   top: 0;
@@ -308,16 +336,16 @@
   z-index: -1;
 }
 
-.cybr-btn:before {
+.cybr-btn-book:before {
   background: var(--shadow-primary);
   transform: translate(var(--border), 0);
 }
 
-.cybr-btn:after {
+.cybr-btn-book:after {
   background: var(--primary);
 }
 
-.cybr-btn__tag {
+.cybr-btn-book__tag {
   position: absolute;
   padding: 1px 1px;
   letter-spacing: 1px;
@@ -329,7 +357,7 @@
   font-size: var(--label-size);
 }
 
-.cybr-btn__glitch {
+.cybr-btn-book__glitch {
   position: absolute;
   top: calc(var(--border) * -1);
   left: calc(var(--border) * -1);
@@ -342,11 +370,11 @@
   display: none;
 }
 
-.cybr-btn:hover .cybr-btn__glitch {
+.cybr-btn-book:hover .cybr-btn-book__glitch {
   display: block;
 }
 
-.cybr-btn__glitch:before {
+.cybr-btn-book__glitch:before {
   content: "";
   position: absolute;
   top: calc(var(--border) * 1);
@@ -424,6 +452,6 @@
   }
 }
 
-.cybr-btn:nth-of-type(2) {
+.cybr-btn-book:nth-of-type(2) {
   --primary-hue: 260;
 }

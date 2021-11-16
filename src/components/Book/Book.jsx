@@ -1,5 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import FlipBook from 'react-pageflip';
+import { isMobile } from 'react-device-detect';
+
+import { SinglePageBook } from '../index';
 
 
 import "./Book.css"
@@ -66,12 +69,12 @@ const Book = ({ page, setPage }) => {
                             Connect_Wallet_
                         </button> */}
                         <button 
-                            className="cybr-btn"
+                            className="cybr-btn-book"
                             onClick={handleMetaMask}
                             >
-                                Connect<span aria-hidden>_</span>
-                                <span aria-hidden className="cybr-btn__glitch">Connect_</span>
-                                <span aria-hidden className="cybr-btn__tag">R25</span>
+                                MetaMask<span aria-hidden>_</span>
+                                <span aria-hidden className="cybr-btn-book__glitch">Metamask_</span>
+                                <span aria-hidden className="cybr-btn-book__tag">R25</span>
                         </button>
                         <form className='mint-form' onSubmit={handleSubmit}>
                             <input
@@ -79,21 +82,14 @@ const Book = ({ page, setPage }) => {
                                 min="1"
                                 max="20"
                                 id='mint-amount-counter'
-                                className='mint-amount-counter'
+                                className='mint-amount-counter mint-form-item'
                                 name='amount_to_mint'
                                 value={amountToMint}
                                 onChange={(e) => {
                                     setAmountToMint(e.target.value)
                                 }}
                             />
-                            {/* <input type="submit" className='submit-amountToMint' value="Mint_" /> */}
-                            <button 
-                                className="cybr-btn"
-                                >
-                                Mint<span aria-hidden>_</span>
-                                <span aria-hidden className="cybr-btn__glitch">Mint_</span>
-                                <span aria-hidden className="cybr-btn__tag">R25</span>
-                            </button>
+                            <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_" />
                         </form>
                     </div>
                 </div>
@@ -106,6 +102,7 @@ const Book = ({ page, setPage }) => {
                     ref={book}
                     onFlip={onFlip}
                     onChangeState={onChangeState}
+                    style={{ visibility: isMobile ? "hidden" : "visible" }}
                 >
                     <div className="page page1">
                         <div className="page-image-1_2-1_2 page1-panel-1"></div>
@@ -121,6 +118,12 @@ const Book = ({ page, setPage }) => {
                         <div className="page-image-1_1-1_1 page4-panel-1"></div>
                     </div>
                 </FlipBook>
+                {isMobile &&
+                <>
+                    <SinglePageBook />
+                    <p>dick</p>
+                </>
+                }
             </div>
         </section>
     );

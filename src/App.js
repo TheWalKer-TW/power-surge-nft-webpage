@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom'
+import React, { useRef, useEffect, useState } from 'react';
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import { ArwesThemeProvider, StylesBaseline } from '@arwes/core';
 
 import { Intro, Navbar, Book, Gallery, SinglePageBook, Error404 } from './components';
@@ -8,7 +8,7 @@ import { Intro, Navbar, Book, Gallery, SinglePageBook, Error404 } from './compon
 let themeSettings = {};
 const palette = {
     primary: { main: '#ff2b2b' },
-    secondary: { main: '#c466dc' },
+    secondary: { main: '#eb3d3d' },
     neutral: { main: '#0f0000' },
     text: {
         root: '#630b0b',
