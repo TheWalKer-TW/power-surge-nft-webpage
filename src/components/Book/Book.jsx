@@ -62,8 +62,16 @@ const Book = ({ page, setPage }) => {
             <div className='book-container'>
                 <div className='form-container' style={{ visibility: formVisibility ? "visible" : "hidden" }}>
                     <div className='form-div'>
-                        <button onClick={handleMetaMask}>
+                        {/* <button onClick={handleMetaMask}>
                             Connect_Wallet_
+                        </button> */}
+                        <button 
+                            className="cybr-btn"
+                            onClick={handleMetaMask}
+                            >
+                                Connect<span aria-hidden>_</span>
+                                <span aria-hidden className="cybr-btn__glitch">Connect_</span>
+                                <span aria-hidden className="cybr-btn__tag">R25</span>
                         </button>
                         <form className='mint-form' onSubmit={handleSubmit}>
                             <input
@@ -78,7 +86,14 @@ const Book = ({ page, setPage }) => {
                                     setAmountToMint(e.target.value)
                                 }}
                             />
-                            <input type="submit" className='submit-amountToMint' value="Mint_" />
+                            {/* <input type="submit" className='submit-amountToMint' value="Mint_" /> */}
+                            <button 
+                                className="cybr-btn"
+                                >
+                                Mint<span aria-hidden>_</span>
+                                <span aria-hidden className="cybr-btn__glitch">Mint_</span>
+                                <span aria-hidden className="cybr-btn__tag">R25</span>
+                            </button>
                         </form>
                     </div>
                 </div>
