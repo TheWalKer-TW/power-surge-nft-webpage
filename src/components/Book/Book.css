@@ -1,3 +1,10 @@
+.hidden{
+  /* width: 0px;
+  height: 0px;
+  visibility: hidden; */
+  display: none !important;
+}
+
 .book-section {
   display: flex;
   width: 100%;

@@ -3,6 +3,7 @@ import FlipBook from 'react-pageflip';
 import { isMobile } from 'react-device-detect';
 
 import { SinglePageBook } from '../index';
+import Pages from "../SinglePageBook/Pages"
 
 
 import "./Book.css"
@@ -102,7 +103,7 @@ const Book = ({ page, setPage }) => {
                     ref={book}
                     onFlip={onFlip}
                     onChangeState={onChangeState}
-                    style={{ visibility: isMobile ? "hidden" : "visible" }}
+                    className={isMobile ? 'hidden' : null}
                 >
                     <div className="page page1">
                         <div className="page-image-1_2-1_2 page1-panel-1"></div>
@@ -118,11 +119,13 @@ const Book = ({ page, setPage }) => {
                         <div className="page-image-1_1-1_1 page4-panel-1"></div>
                     </div>
                 </FlipBook>
-                {isMobile &&
-                <>
-                    <SinglePageBook />
-                    <p>dick</p>
-                </>
+                {isMobile && 
+                    Pages.pages.map( (page) => (
+                    <p>lol</p>
+                    // <section className='page-section' id={page.name}>
+                    //     <img className='singlepagebook-page' src={page.image} alt={page.description} />
+                    // </section>
+                    ))
                 }
             </div>
         </section>
