@@ -5,14 +5,13 @@ import { isMobile } from 'react-device-detect';
 import { SinglePageBook } from '../index';
 import Pages from "../SinglePageBook/Pages"
 
-
+import {init, handleMetaMask, mint} from "../Metamask/Metamask"
 import "./Book.css"
 
 const Book = ({ page, setPage }) => {
 
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight * (0.975);
-
 
     let bookWidth = windowWidth / 2 - windowWidth / 20;
     let bookHeight = (6071 / 4299) * bookWidth;
@@ -27,14 +26,13 @@ const Book = ({ page, setPage }) => {
 
     const [amountToMint, setAmountToMint] = useState("1");
     const [formVisibility, setFormVisibility] = useState(true);
+    const [metaMaskConnected, setMetaMaskConnected] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(`Amount selected to mint: ${amountToMint}`)
-    }
 
-    const handleMetaMask = () => {
-        console.log("Handle MetaMask Connection - Book")
+        mint(amountToMint)();
     }
 
     const onFlip = (e) => {
@@ -42,7 +40,7 @@ const Book = ({ page, setPage }) => {
         currentPage !== 0 ? setFormVisibility(false) : setFormVisibility(true);
     }
     const onChangeState = (e) => {
-    
+
         const currentState = e.data;
         const currentPage = book.current.pageFlip().getCurrentPageIndex();
         setPage(currentPage)
@@ -51,7 +49,7 @@ const Book = ({ page, setPage }) => {
             currentState === "flipping" ? setFormVisibility(false) :
                 currentState === "user_fold" ? setFormVisibility(false) :
                     setFormVisibility(true);
-    
+
     }
 
     useEffect( () => {
@@ -61,37 +59,41 @@ const Book = ({ page, setPage }) => {
         };
     }, [page]);
 
+
+    init(setMetaMaskConnected)()
     return (
         <section className="book-section" id="home">
             <div className='book-container'>
                 <div className='form-container' style={{ visibility: formVisibility ? "visible" : "hidden" }}>
                     <div className='form-div'>
-                        {/* <button onClick={handleMetaMask}>
-                            Connect_Wallet_
-                        </button> */}
-                        <button 
-                            className="cybr-btn-book"
-                            onClick={handleMetaMask}
-                            >
-                                MetaMask<span aria-hidden>_</span>
-                                <span aria-hidden className="cybr-btn-book__glitch">Metamask_</span>
-                                <span aria-hidden className="cybr-btn-book__tag">R25</span>
-                        </button>
-                        <form className='mint-form' onSubmit={handleSubmit}>
-                            <input
-                                type="number"
-                                min="1"
-                                max="20"
-                                id='mint-amount-counter'
-                                className='mint-amount-counter mint-form-item'
-                                name='amount_to_mint'
-                                value={amountToMint}
-                                onChange={(e) => {
-                                    setAmountToMint(e.target.value)
-                                }}
-                            />
-                            <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_" />
-                        </form>
+                        {!metaMaskConnected &&
+                          <button
+                              className="cybr-btn-book"
+                              onClick={handleMetaMask(setMetaMaskConnected)}
+                              >
+                                  Connect<span aria-hidden>_</span>
+                                  <span aria-hidden className="cybr-btn-book__glitch">MetaMask_</span>
+                                  <span aria-hidden className="cybr-btn-book__tag">R25</span>
+                          </button>
+                        }
+                        {
+                          metaMaskConnected &&
+                          <form className='mint-form' onSubmit={handleSubmit}>
+                              <input
+                                  type="number"
+                                  min="1"
+                                  max="20"
+                                  id='mint-amount-counter'
+                                  className='mint-amount-counter mint-form-item'
+                                  name='amount_to_mint'
+                                  value={amountToMint}
+                                  onChange={(e) => {
+                                      setAmountToMint(e.target.value)
+                                  }}
+                              />
+                              <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_" />
+                          </form>
+                        }
                     </div>
                 </div>
                 <FlipBook
@@ -119,7 +121,7 @@ const Book = ({ page, setPage }) => {
                         <div className="page-image-1_1-1_1 page4-panel-1"></div>
                     </div>
                 </FlipBook>
-                {isMobile && 
+                {isMobile &&
                     Pages.pages.map( (page) => (
                     <p>lol</p>
                     // <section className='page-section' id={page.name}>
