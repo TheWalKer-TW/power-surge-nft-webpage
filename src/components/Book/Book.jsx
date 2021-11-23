@@ -67,32 +67,32 @@ const Book = ({ page, setPage }) => {
                 <div className='form-container' style={{ visibility: formVisibility ? "visible" : "hidden" }}>
                     <div className='form-div'>
                         {!metaMaskConnected &&
-                          <button
-                              className="cybr-btn-book"
-                              onClick={handleMetaMask(setMetaMaskConnected)}
-                              >
-                                  Connect<span aria-hidden>_</span>
-                                  <span aria-hidden className="cybr-btn-book__glitch">MetaMask_</span>
-                                  <span aria-hidden className="cybr-btn-book__tag">R25</span>
-                          </button>
+                            <button
+                                className="cybr-btn-book"
+                                onClick={handleMetaMask(setMetaMaskConnected)}
+                                >
+                                    Connect<span aria-hidden>_</span>
+                                    <span aria-hidden className="cybr-btn-book__glitch">MetaMask_</span>
+                                    <span aria-hidden className="cybr-btn-book__tag">R25</span>
+                            </button>
                         }
                         {
-                          metaMaskConnected &&
-                          <form className='mint-form' onSubmit={handleSubmit}>
-                              <input
-                                  type="number"
-                                  min="1"
-                                  max="20"
-                                  id='mint-amount-counter'
-                                  className='mint-amount-counter mint-form-item'
-                                  name='amount_to_mint'
-                                  value={amountToMint}
-                                  onChange={(e) => {
-                                      setAmountToMint(e.target.value)
-                                  }}
-                              />
-                              <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_" />
-                          </form>
+                            metaMaskConnected &&
+                            <form className='mint-form' onSubmit={handleSubmit}>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    max="30"
+                                    id='mint-amount-counter'
+                                    className='mint-amount-counter mint-form-item'
+                                    name='amount_to_mint'
+                                    value={amountToMint}
+                                    onChange={(e) => {
+                                        setAmountToMint(e.target.value)
+                                    }}
+                                />
+                                <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_" />
+                            </form>
                         }
                     </div>
                 </div>
