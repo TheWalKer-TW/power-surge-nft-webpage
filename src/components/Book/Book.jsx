@@ -16,10 +16,18 @@ const Book = ({ page, setPage }) => {
     let bookWidth = windowWidth / 2 - windowWidth / 20;
     let bookHeight = (6071 / 4299) * bookWidth;
 
-
     if (bookHeight > windowHeight) {
         bookHeight = windowHeight * 0.975;
         bookWidth = (4299 / 6071) * bookHeight;
+    }
+
+
+    let mobileBookWidth = windowWidth - windowWidth / 10;
+    let mobileBookHeight = (6071 / 4299) * mobileBookWidth;
+
+    if (mobileBookHeight > windowHeight) {
+        mobileBookHeight = windowHeight * 0.975;
+        mobileBookWidth = (4299 / 6071) * mobileBookHeight;
     }
 
     const book = useRef();
@@ -63,9 +71,9 @@ const Book = ({ page, setPage }) => {
     init(setMetaMaskConnected)()
     return (
         <section className="book-section" id="home">
-            <div className='book-container'>
-                <div className='form-container' style={{ visibility: formVisibility ? "visible" : "hidden" }}>
-                    <div className='form-div'>
+            <div className='book-container' style={{ flexDirection: isMobile ? "column" : "" }}>
+                <div className={isMobile ? 'mobile-form-container' : 'form-container'} style={{ visibility: formVisibility ? "visible" : "hidden" }}>
+                    <div className={isMobile ? 'mobile-form-div' : 'form-div'}>
                         {!metaMaskConnected &&
                             <button
                                 className="cybr-btn-book"
@@ -123,10 +131,11 @@ const Book = ({ page, setPage }) => {
                 </FlipBook>
                 {isMobile &&
                     Pages.pages.map( (page) => (
-                    <p>lol</p>
-                    // <section className='page-section' id={page.name}>
-                    //     <img className='singlepagebook-page' src={page.image} alt={page.description} />
-                    // </section>
+                        <>
+                            <section className='mobile-page-section' style={{ width: mobileBookWidth, height: mobileBookHeight}} id={page.name}>
+                                <img className='mobile-singlepagebook-page' style={{ width: mobileBookWidth, height: mobileBookHeight }} src={page.image} alt={page.description} />
+                            </section>
+                        </>
                     ))
                 }
             </div>
