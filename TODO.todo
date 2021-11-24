@@ -11,6 +11,7 @@
 ✔ Hacer un useState de metamask connected o no y poner el connect wallet en la navbar encima de todo @done (7/11/2021 18:43:08) y que desaparezca cuando esta conectado
 ✔ Hacer version telefono @done (24/11/2021 18:02:17)
 ✔ Have a popup or smth on top of the website to show errors from contract. (e.g. all nfts are minted or insufficient balance) @done (24/11/2021 18:51:11)
+✔ Fix blurry text @done (24/11/2021 22:47:31)
 ☐ Estilizar el wallet button
 ☐ Estilizar el counter de cuantos mintear
 ☐ Estilizar el mint button
@@ -19,7 +20,6 @@
 
 ☐ Ajustar los rem
 
-☐ Fix blurry text
 
 Later on:
     ☐ Counter that keeps track of how many have been minted
