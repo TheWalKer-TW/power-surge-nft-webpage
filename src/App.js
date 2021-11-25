@@ -5,6 +5,7 @@ import { ArwesThemeProvider, Button, StylesBaseline } from '@arwes/core';
 import { Intro, Navbar, Book, Gallery, SinglePageBook, Error404 } from './components';
 
 
+
 let themeSettings = {};
 const palette = {
     primary: { main: '#ff2b2b' },
@@ -39,7 +40,7 @@ const App = () => {
             {/* With the style on Intro.scss */}
             <Navbar setPage={ setPage } />
             {/* <Intro all={ all } /> */}
-            <div ref={ all }>
+            <div ref={ all } className='Main-Page'>
                 <BrowserRouter>
                     <ArwesThemeProvider themeSettings={ themeSettings }>
                         <StylesBaseline />

@@ -1,45 +1,45 @@
-.navbar{
-    background: rgb(5, 0, 0);
-    padding: 0;
-    width: 3rem;
-    height: 100vh;
-    position: fixed;
-    z-index: 40;
-    top: 0;
-    right: 0;
-    opacity: 1;
+.navbar {
+  background: rgb(5, 0, 0);
+  padding: 0;
+  width: 2.5vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  opacity: 1;
 }
 
-.navbar:hover{
-   width: 12rem;
+.navbar:hover {
+  width: 12vw;
 }
-.navbar:hover .display{
+.navbar:hover .display {
   display: none;
 }
-.navbar:hover .display-none{
+.navbar:hover .display-none {
   display: block;
 }
-.display-none{
+.display-none {
   display: none;
 }
 
-.nav-sections{
-    margin: 0;
-    padding: 1.5rem 1rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    list-style-type: none;
-    text-align: center;
+.nav-sections {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  list-style-type: none;
+  text-align: center;
 }
 
-.nav-social-media{
+.nav-social-media {
   margin-top: auto;
 }
 
-.nav-social-media a{
+.nav-social-media a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -48,10 +48,10 @@
   padding: 0.5rem 0rem;
   list-style-type: none;
   width: 8rem;
-  font-family: 'Share Tech Mono', monospace, sans-serif;
+  font-family: "Share Tech Mono", monospace, sans-serif;
 }
 
-.nav-links li{
+.nav-links li {
   margin: 0;
   padding: 1rem;
 }
@@ -69,17 +69,97 @@
   --label-size: 0.5rem;
   --shadow-secondary-hue: 60;
   --shadow-secondary: #ff2b2b;
-  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
+  --clip: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 70%
+  );
   --border: 0.2rem;
   --shimmy-distance: 5;
-  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
-  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
-  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
-  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
-  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
-  font-family: 'Share Tech Mono', monospace, sans-serif;
+  --clip-one: polygon(
+    0 2%,
+    100% 2%,
+    100% 95%,
+    95% 95%,
+    95% 90%,
+    85% 90%,
+    85% 95%,
+    8% 95%,
+    0 70%
+  );
+  --clip-two: polygon(
+    0 78%,
+    100% 78%,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 78%
+  );
+  --clip-three: polygon(
+    0 44%,
+    100% 44%,
+    100% 54%,
+    95% 54%,
+    95% 54%,
+    85% 54%,
+    85% 54%,
+    8% 54%,
+    0 54%
+  );
+  --clip-four: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-five: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-six: polygon(
+    0 40%,
+    100% 40%,
+    100% 85%,
+    95% 85%,
+    95% 85%,
+    85% 85%,
+    85% 85%,
+    8% 85%,
+    0 70%
+  );
+  --clip-seven: polygon(
+    0 63%,
+    100% 63%,
+    100% 80%,
+    95% 80%,
+    95% 80%,
+    85% 80%,
+    85% 80%,
+    8% 80%,
+    0 70%
+  );
+  font-family: "Share Tech Mono", monospace, sans-serif;
   color: var(--color);
   cursor: pointer;
   background: transparent;
@@ -95,15 +175,23 @@
 }
 
 .cybr-btn:hover {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+  --primary: hsl(
+    var(--primary-hue),
+    85%,
+    calc(var(--primary-lightness, 50) * 0.8%)
+  );
 }
 .cybr-btn:active {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
+  --primary: hsl(
+    var(--primary-hue),
+    85%,
+    calc(var(--primary-lightness, 50) * 0.6%)
+  );
 }
 
 .cybr-btn:after,
 .cybr-btn:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -152,7 +240,7 @@
 }
 
 .cybr-btn__glitch:before {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(var(--border) * 1);
   right: calc(var(--border) * 1);
@@ -167,7 +255,8 @@
   0% {
     clip-path: var(--clip-one);
   }
-  2%, 8% {
+  2%,
+  8% {
     clip-path: var(--clip-two);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
@@ -187,7 +276,8 @@
     clip-path: var(--clip-three);
     transform: translate(0, 0);
   }
-  14%, 21% {
+  14%,
+  21% {
     clip-path: var(--clip-four);
     transform: translate(calc(var(--shimmy-distance) * 1%), 0);
   }
@@ -199,7 +289,8 @@
     clip-path: var(--clip-five);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
-  35%, 45% {
+  35%,
+  45% {
     clip-path: var(--clip-six);
     transform: translate(calc(var(--shimmy-distance) * -1%));
   }
@@ -219,7 +310,9 @@
     clip-path: var(--clip-seven);
     transform: translate(0, 0);
   }
-  31%, 61%, 100% {
+  31%,
+  61%,
+  100% {
     clip-path: var(--clip-four);
   }
 }
