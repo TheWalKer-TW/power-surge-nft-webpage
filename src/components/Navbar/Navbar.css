@@ -1,7 +1,7 @@
 .navbar {
   background: rgb(5, 0, 0);
   padding: 0;
-  width: 2.5vw;
+  width: 3.5vw;
   height: 100vh;
   position: fixed;
   z-index: 40;
@@ -11,7 +11,7 @@
 }
 
 .navbar:hover {
-  width: 12vw;
+  width: 10rem;
 }
 .navbar:hover .display {
   display: none;
