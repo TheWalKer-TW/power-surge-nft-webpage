@@ -1,4 +1,4 @@
-.hidden{
+.hidden {
   /* width: 0px;
   height: 0px;
   visibility: hidden; */
@@ -21,13 +21,13 @@
   justify-content: center;
 }
 
-.mobile-page-section{
+.mobile-page-section {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0 2rem;
 }
-.mobile-singlepagebook-page{
+.mobile-singlepagebook-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,11 +76,11 @@
   top: 46%;
 }
 
-.mint-form{
-  background-color: #630b0b;
+.mint-form {
+  /* background-color: #630b0b; */
   width: 9rem;
   border-radius: 10%;
-  border: 2px solid #ff2b2b;
+  /* border: 2px solid #ff2b2b; */
   font-family: "Share Tech Mono", monospace, sans-serif;
   padding: 0rem 0.5rem;
   display: flex;
@@ -89,19 +89,25 @@
   flex-direction: column;
 }
 
-.mint-form-item{
+.mint-form-item {
   margin: 0.3rem 0rem;
   color: #ff2b2b;
-  border-radius: 10%;
+  border-radius: 1rem;
+  background-color: #630b0b;
 }
 
-.mint-amount-counter{
+.mint-form-item:hover {
+  color: #ff2b2b;
+  background-color: #bd0f0f;
+}
+
+.mint-amount-counter {
   border: none;
   width: fit-content;
+  text-align: center;
 }
 
-.submit-amountToMint{
-  
+.submit-amountToMint {
 }
 
 .page {

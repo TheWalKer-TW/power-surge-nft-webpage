@@ -12,9 +12,9 @@
 ✔ Hacer version telefono @done (24/11/2021 18:02:17)
 ✔ Have a popup or smth on top of the website to show errors from contract. (e.g. all nfts are minted or insufficient balance) @done (24/11/2021 18:51:11)
 ✔ Fix blurry text @done (24/11/2021 22:47:31)
-☐ Estilizar el wallet button
-☐ Estilizar el counter de cuantos mintear
-☐ Estilizar el mint button
+✔ Estilizar el wallet button @done (26/11/2021 10:53:34)
+✔ Estilizar el counter de cuantos mintear @done (26/11/2021 11:13:00)
+✔ Estilizar el mint button @done (26/11/2021 11:13:01)
 ☐ Acabar navbar
 ☐ Arreglar el boton metamask de la navbar para q no haga la funcion 14873209487 veces (cada vez que se expande la navbar)
 
