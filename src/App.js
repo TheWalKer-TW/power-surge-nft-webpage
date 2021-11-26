@@ -38,30 +38,30 @@ const App = () => {
         <div>
             <div className='scanline'></div>
             {/* With the style on Intro.scss */}
-            <Navbar setPage={ setPage } />
-            {/* <Intro all={ all } /> */}
-            <div ref={ all } className='Main-Page'>
-                <BrowserRouter>
-                    <ArwesThemeProvider themeSettings={ themeSettings }>
-                        <StylesBaseline />
-                        <Switch>
-                            <Route exact path='/'>
-                                <Book page={ page } setPage={ setPage } />
-                                <Gallery />
-                            </Route>
-                            <Route exact path='/manga'>
-                                <SinglePageBook />
-                            </Route>
-                            <Route exact path="/manga/:section">
-                                <SinglePageBook />
-                            </Route>
-                            <Route path="*">
-                                <Error404 />
-                            </Route>
-                        </Switch>
-                    </ArwesThemeProvider>
-                </BrowserRouter>
-            </div>
+            <BrowserRouter>
+                <Navbar setPage={ setPage } />
+                {/* <Intro all={ all } /> */}
+                <div ref={ all } className='Main-Page'>
+                        <ArwesThemeProvider themeSettings={ themeSettings }>
+                            <StylesBaseline />
+                            <Switch>
+                                <Route exact path='/'>
+                                    <Book page={ page } setPage={ setPage } />
+                                    <Gallery />
+                                </Route>
+                                <Route exact path='/manga'>
+                                    <SinglePageBook />
+                                </Route>
+                                <Route exact path="/manga/:section">
+                                    <SinglePageBook />
+                                </Route>
+                                <Route path="*">
+                                    <Error404 />
+                                </Route>
+                            </Switch>
+                        </ArwesThemeProvider>
+                </div>
+            </BrowserRouter>
         </div>
     )
 }

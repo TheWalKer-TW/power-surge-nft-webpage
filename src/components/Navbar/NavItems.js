@@ -1,11 +1,6 @@
-import { faHome, faBook, faMapSigns, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faMapSigns, faUsers } from '@fortawesome/free-solid-svg-icons';
 const NavItems = {
     navitems: [
-        {
-            id: 0,
-            name: 'Home',
-            icon: faHome
-        },
         {
             id: 1,
             name: 'Story',

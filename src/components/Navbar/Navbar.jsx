@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 
 import "./Navbar.css"
 import NavItems from './NavItems'
@@ -58,7 +61,20 @@ const Navbar = ({ setPage }) => {
                                 <span aria-hidden className="cybr-btn__glitch">Connect_</span>
                                 <span aria-hidden className="cybr-btn__tag">R25</span>
                             </button>
-                        </li>}
+                        </li>
+                    }
+                    <li id={"Home"}>
+                        <FontAwesomeIcon icon={faHome} className='nav-icon display'></FontAwesomeIcon>
+                        <Link
+                            className="cybr-btn display-none"
+                            to="/"
+                            onClick={() => setPage(0)}
+                        >
+                            Home<span aria-hidden>_</span>
+                            <span aria-hidden className="cybr-btn__glitch">Home_</span>
+                            <span aria-hidden className="cybr-btn__tag">R25</span>
+                        </Link>
+                    </li>
                     {NavItems.navitems.map((navitem) => (
                         <li id={navitem.name}>
                             <FontAwesomeIcon icon={navitem.icon} className='nav-icon display'></FontAwesomeIcon>
