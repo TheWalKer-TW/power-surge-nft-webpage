@@ -21,7 +21,6 @@ const Book = ({ page, setPage }) => {
         bookWidth = (4299 / 6071) * bookHeight;
     }
 
-
     let mobileBookWidth = windowWidth - windowWidth / 10;
     let mobileBookHeight = (6071 / 4299) * mobileBookWidth;
 
@@ -47,6 +46,7 @@ const Book = ({ page, setPage }) => {
         const currentPage = book.current.pageFlip().getCurrentPageIndex();
         currentPage !== 0 ? setFormVisibility(false) : setFormVisibility(true);
     }
+
     const onChangeState = (e) => {
 
         const currentState = e.data;
@@ -67,7 +67,6 @@ const Book = ({ page, setPage }) => {
         };
     }, [page]);
 
-
     init(setMetaMaskConnected)()
     return (
         <section className="book-section" id="home">
@@ -80,7 +79,7 @@ const Book = ({ page, setPage }) => {
                                 onClick={handleMetaMask(setMetaMaskConnected)}
                                 >
                                     Connect<span aria-hidden>_</span>
-                                    <span aria-hidden className="cybr-btn-book__glitch">MetaMask_</span>
+                                <span aria-hidden className="cybr-btn-book__glitch">Connect_</span>
                                     <span aria-hidden className="cybr-btn-book__tag">R25</span>
                             </button>
                         }
