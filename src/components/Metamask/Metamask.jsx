@@ -69,7 +69,11 @@ const mint = (num) => {
     })
   }
 
-  return wrapp
+  const disable = () => {
+    // do nothing
+  }
+
+  return disable
 }
 
 export {isMetaMaskInstalled, init, handleMetaMask, mint}
