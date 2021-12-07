@@ -8,43 +8,14 @@ import "./Navbar.css"
 import NavItems from './NavItems'
 import SocialMedia from './SocialMedia'
 import Metamask from "../../assets/logos/metamask-fox.svg"
-import Web3 from 'web3';
+import {init, handleMetaMask} from "../Metamask/Metamask"
 
 const Navbar = ({ setPage }) => {
 
     const [metaMaskConnected, setMetaMaskConnected] = useState(false)
     const [isShown, setIsShown] = useState(false);
-    const { ethereum } = window;
-    const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
 
-    const init = () => {
-      if(isMetaMaskInstalled()){
-        web3.eth.getAccounts(function(err, accounts){
-            if (err != null) console.error("An error occurred: "+err);
-            else if (accounts.length == 0) console.log("User is not logged in to MetaMask");
-            else {
-              setMetaMaskConnected(state => true);
-              console.log("User is logged in to MetaMask");
-            }
-        });
-      }
-    }
-
-    const isMetaMaskInstalled = () => {
-      return Boolean(ethereum && ethereum.isMetaMask);
-    };
-
-    const handleMetaMask = () => {
-        console.log("Handle MetaMask Connection - NavBar");
-        if(isMetaMaskInstalled()){
-          ethereum.request({ method: 'eth_requestAccounts' }).then((result) => {
-            console.log("Connected as" + result[0]);
-            setMetaMaskConnected(state => true);
-          });
-        }
-    };
-
-    init();
+    init(setMetaMaskConnected)
 
     return (
         <nav className="navbar" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>

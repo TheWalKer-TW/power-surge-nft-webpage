@@ -67,7 +67,7 @@ const Book = ({ page, setPage }) => {
         };
     }, [page]);
 
-    init(setMetaMaskConnected)()
+    init(setMetaMaskConnected)
     return (
         <section className="book-section" id="home">
             <div className='book-container' style={{ flexDirection: isMobile ? "column" : "" }}>
@@ -76,7 +76,7 @@ const Book = ({ page, setPage }) => {
                         {!metaMaskConnected &&
                             <button
                                 className="cybr-btn-book"
-                                onClick={handleMetaMask(setMetaMaskConnected)}
+                                onClick={handleMetaMask}
                                 >
                                     Connect<span aria-hidden>_</span>
                                 <span aria-hidden className="cybr-btn-book__glitch">Connect_</span>

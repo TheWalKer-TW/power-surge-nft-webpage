@@ -3,7 +3,7 @@ import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import { ArwesThemeProvider, Button, StylesBaseline } from '@arwes/core';
 
 import { Intro, Navbar, Book, Gallery, SinglePageBook, Error404 } from './components';
-
+import { ToastContainer} from "react-toastify";
 
 
 let themeSettings = {};
@@ -33,10 +33,11 @@ const App = () => {
         alert(`Your transaction have been parameter.`)
     // Also if we have more information about the error in the transaction we can display the error in the alert
     }
-        
+
     return (
         <div>
             <div className='scanline'></div>
+            <ToastContainer id='main-toast'/>
             {/* With the style on Intro.scss */}
             <BrowserRouter>
                 <Navbar setPage={ setPage } />
