@@ -34,6 +34,14 @@ const checkNetwork = () => {
 
 const updateCurrentAccount = (state) => {
   if(isMetaMaskInstalled()){
+    ethereum.on('accountsChanged', data => {
+      if(data.length === 0){
+        current_account = undefined;
+        states.forEach(state=>state(s => false));
+      }
+      current_account = data[0];
+    });
+    
     web3.eth.getAccounts(function(err, accounts){
         if (err != null) return;
         else if (accounts.length === 0) return;
@@ -50,14 +58,6 @@ const init = (state) => {
 
   updateCurrentAccount(state);
 }
-
-ethereum.on('accountsChanged', data => {
-  if(data.length === 0){
-    current_account = undefined;
-    states.forEach(state=>state(s => false));
-  }
-  current_account = data[0];
-});
 
 const handleMetaMask = () => {
     console.log("Handle MetaMask Connection");
