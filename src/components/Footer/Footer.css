@@ -1,0 +1,104 @@
+.footer-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-size: 1.5vh;
+}
+
+.footer-container-1{
+    width: 95%;
+    background: rgb(5, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container-cheddar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5% 0% 0%;
+}
+
+.footer-container-3{
+    width: 33%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.1%;
+    padding-bottom: 0.5%;
+}
+
+.footer-container-4{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title{
+    font-size: 150%;
+    margin-bottom: 1%;
+    user-select: none;
+    color: rgb(20, 20, 20);
+}
+
+.footer-container-cheddar span{
+    font-size: 140%;
+    user-select: none;
+    color: rgb(20, 20, 20);
+}
+
+.footer-container-cheddar span a{
+    font-size: 150%;
+    color: rgb(90, 90, 90);
+}
+
+.footer-container-cheddar span a:hover{
+    font-size: 170%;
+    color: #a32222;
+}
+
+.footer-name{
+    margin: 0% 0% 1vh;
+}
+
+.footer-name a{
+    font-size: 100%;
+    color: rgb(90, 90, 90);
+}
+
+.footer-name a:hover{
+    font-size: 120%;
+    color: #a32222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

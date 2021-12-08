@@ -1,0 +1,13 @@
+.header-social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2.5% 10% 2.5% 10%;
+    background: rgb(5, 0, 0);
+}
+
+.header-icon{
+  font-size: 6vw;
+  width: 6vw;
+}

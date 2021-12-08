@@ -69,7 +69,7 @@ const Book = ({ page, setPage }) => {
 
     init(setMetaMaskConnected)
     return (
-        <section className="book-section" id="home">
+        <section className="book-section" id="home" style={{ paddingTop: isMobile ? "5%" : "1%"}}>
             <div className='book-container' style={{ flexDirection: isMobile ? "column" : "" }}>
                 <div className={isMobile ? 'mobile-form-container' : 'form-container'} style={{ visibility: formVisibility ? "visible" : "hidden" }}>
                     <div className={isMobile ? 'mobile-form-div' : 'form-div'}>
@@ -115,7 +115,7 @@ const Book = ({ page, setPage }) => {
                     className={isMobile ? 'hidden' : null}
                 >
                     <div className="page page1">
-                        <div className="page-image-1_1-1_1 page1-panel"></div>
+                        <div className="page-image-1_1-1_1 page1-panel-1"></div>
                     </div>
                     <div className="page page2">
                         <div className="page-image-1_1-1_1 page2-panel-1"></div>
