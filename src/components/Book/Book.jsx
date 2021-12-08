@@ -115,8 +115,7 @@ const Book = ({ page, setPage }) => {
                     className={isMobile ? 'hidden' : null}
                 >
                     <div className="page page1">
-                        <div className="page-image-1_2-1_2 page1-panel-1"></div>
-                        <div className="page-image-1_2-1_2 page1-panel-2"></div>
+                        <div className="page-image-1_1-1_1 page1-panel"></div>
                     </div>
                     <div className="page page2">
                         <div className="page-image-1_1-1_1 page2-panel-1"></div>

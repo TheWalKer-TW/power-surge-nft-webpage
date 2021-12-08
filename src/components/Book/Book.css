@@ -144,6 +144,16 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.page1-panel {
+  margin-bottom: 5%;
+  background-color: black;
+  background: url("../../assets/book/page1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .page2-panel-1 {
   background-color: black;
   background: url("../../assets/book/page2.jpg");

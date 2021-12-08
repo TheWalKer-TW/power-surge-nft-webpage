@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const { ethereum } = window;
 const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
-const contract_address = "0xdcaEB80CC98e6030981b5830BCa9de7216f3dfe1";
+const contract_address = "0x6edd07b0b8e8c025072def2925d7e7a9ff7350ce";
 const psn = new web3.eth.Contract(abi, contract_address);
 var current_account = undefined;
 const states = []
@@ -15,7 +15,7 @@ const isMetaMaskInstalled = () => {
 };
 
 const checkNetwork = () => {
-  if(ethereum.networkVersion != 4){
+  if(ethereum.networkVersion != 1){
     toast("You are not connected to ethereum mainnet.", {
         type: toast.TYPE.INFO,
         position: "top-left",
@@ -32,6 +32,38 @@ const checkNetwork = () => {
   return true;
 }
 
+const internalToast = (message, type) => {
+  toast(message, {
+      type: type,
+      position: "top-left",
+      autoClose: true,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+   });
+}
+
+
+const checkMintEnabled = () => {
+  if(psn!==undefined){
+    psn.methods.isPublicMintEnabled().call(function (err, res) {
+      if (err) {
+        internalToast("Error raised while trying to get contract status.", toast.TYPE.INFO);
+        return;
+      }
+
+      if(!res){
+        internalToast("Minting is not enabled yet. Check twitter or discord announcements.", toast.TYPE.INFO);
+      }
+    });
+  } else {
+     internalToast("Unexpected error. Please contact project team if this ever shows up.", toast.TYPE.ERROR);
+  }
+
+}
+
 const updateCurrentAccount = (state) => {
   if(isMetaMaskInstalled()){
     ethereum.on('accountsChanged', data => {
@@ -41,7 +73,7 @@ const updateCurrentAccount = (state) => {
       }
       current_account = data[0];
     });
-    
+
     web3.eth.getAccounts(function(err, accounts){
         if (err != null) return;
         else if (accounts.length === 0) return;
@@ -109,6 +141,10 @@ const mint = (num) => {
 
   const wrapp = () => {
     if(!checkNetwork()){
+      return;
+    }
+
+    if(!checkMintEnabled()){
       return;
     }
 
