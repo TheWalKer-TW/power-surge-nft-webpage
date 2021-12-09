@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const { ethereum } = window;
 const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
-const contract_address = "0x6edd07b0b8e8c025072def2925d7e7a9ff7350ce";
+const contract_address = "0x6edD07B0B8e8C025072dEf2925D7E7a9ff7350cE";
 const psn = new web3.eth.Contract(abi, contract_address);
 var current_account = undefined;
 const states = []
@@ -51,15 +51,18 @@ const checkMintEnabled = () => {
     psn.methods.isPublicMintEnabled().call(function (err, res) {
       if (err) {
         internalToast("Error raised while trying to get contract status.", toast.TYPE.INFO);
-        return;
+        return false;
       }
 
       if(!res){
         internalToast("Minting is not enabled yet. Check twitter or discord announcements.", toast.TYPE.INFO);
+        return false;
       }
+      return true;
     });
   } else {
      internalToast("Unexpected error. Please contact project team if this ever shows up.", toast.TYPE.ERROR);
+     return false;
   }
 
 }
@@ -144,9 +147,9 @@ const mint = (num) => {
       return;
     }
 
-    if(!checkMintEnabled()){
-      return;
-    }
+    // if(!checkMintEnabled()){
+    //   return;
+    // }
 
     notify("Transaction in progress.")
     web3.eth.getTransactionCount(current_account, 'latest').then(function(nonce) {
@@ -155,8 +158,8 @@ const mint = (num) => {
       let transactionParameters = {
           "from": current_account,
           "nonce": web3.utils.toHex(nonce),
-          "gasPrice": web3.utils.toHex(5 * 10e8),
-          "gasLimit": web3.utils.toHex(330000),
+          // "gasPrice": web3.utils.toHex(5 * 10e8),
+          // "gasLimit": web3.utils.toHex(330000),
           "to": contract_address,
           "value": web3.utils.toHex(num*4e16),
           "data": data,
