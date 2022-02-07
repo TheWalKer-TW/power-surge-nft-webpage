@@ -98,7 +98,7 @@ const Book = ({ page, setPage }) => {
                                         setAmountToMint(e.target.value)
                                     }}
                                 />
-                                <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_" />
+                                <input type="submit" className='submit-amountToMint mint-form-item' value="Mint_ (0.013)" />
                             </form>
                         }
                     </div>
